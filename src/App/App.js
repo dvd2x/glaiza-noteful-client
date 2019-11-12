@@ -18,6 +18,9 @@ class App extends Component {
   };
 
   componentDidMount() {
+      console.log(`${config.API_ENDPOINT}/notes`);
+      console.log(`${config.API_ENDPOINT}/folders`);
+      
     Promise.all([
       fetch(`${config.API_ENDPOINT}/notes`),
       fetch(`${config.API_ENDPOINT}/folders`)
@@ -68,7 +71,7 @@ class App extends Component {
   renderNavRoutes() {
     return (
       <>
-        {['/', '/folder/:folderId'].map(path =>
+        {['/', '/folder/:folderid'].map(path =>
           <Route
             exact
             key={path}
@@ -77,7 +80,7 @@ class App extends Component {
           />
         )}
         <Route
-          path='/note/:noteId'
+          path='/note/:noteid'
           component={NotePageNav}
         />
         <Route
@@ -95,7 +98,7 @@ class App extends Component {
   renderMainRoutes() {
     return (
       <>
-        {['/', '/folder/:folderId'].map(path =>
+        {['/', '/folder/:folderid'].map(path =>
           <Route
             exact
             key={path}
@@ -104,7 +107,7 @@ class App extends Component {
           />
         )}
         <Route
-          path='/note/:noteId'
+          path='/note/:noteid'
           component={NotePageMain}
         />
         <Route
