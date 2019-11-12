@@ -14,13 +14,13 @@ describe(`NotePageNav component`, () => {
     const props = {
       match: {
         params: {
-          noteId: 'test-note-id'
+          noteid: 'test-note-id'
         }
       }
     }
     const context = {
-      notes: [{ id: 'test-note-id', folderId: 'test-folder-id' }],
-      folders: [{ id: 'test-folder-id', name: 'Important' }]
+      notes: [{ noteid: 'test-note-id', folderid: 'test-folder-id' }],
+      folders: [{ folderid: 'test-folder-id', folder_title: 'Important' }]
     }
 
     const h3 = shallow(<NotePageNav {...props} />, context)
