@@ -1,6 +1,5 @@
 {
   "name": "noteful-client",
-  "alias": "glaiza-noteful-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
